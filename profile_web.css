@@ -1,0 +1,542 @@
+/* Realizado por Rafael Fernandez 2022*/
+
+/* Se establece el la fuente de toda la pagina */
+*{
+    font-family: arial;
+  }
+
+
+/* estilo para la barra en todas las resoluciones */
+
+.bar{
+    background-color:rgb(64,64,64);
+    display: flex;
+    padding: 10px 10px; 
+    line-height: 25px; 
+    border-radius: 5px; 
+    margin-top: 1%;
+}
+
+.bar_item:first-child p{
+    margin:0;
+}
+
+
+.bar_item{
+     margin: 5x; 
+     padding: 5px 10px;
+}
+
+.bar_item:first-child{
+    flex:1;
+    color: white;
+    width: 20px;
+    font-size: 2em;
+}
+
+
+
+.bar_item:last-child {
+    border: white solid 1px;
+    background-color: dodgerblue; 
+    height:20px;
+    width: 95px;   
+    border-radius: 5px;
+    margin-left: 10px;
+    text-align: center;
+    box-shadow: 3px 4px black;
+}
+
+.bar_item a {
+    text-decoration: none;
+    color: white;
+}
+
+.bar_item p {
+    color:white;
+    margin: 0;
+}
+
+.compress_menu{
+    color: white;
+    font-size: 2em;
+}
+
+.bar_item:last-child:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* estilo para la barra en la resolucion de celular */
+
+@media only screen and (max-width: 590px) {
+
+        .bar_item a{
+            display: none;
+        }
+
+
+  
+  } 
+  @media only screen and (min-width: 591px) {
+    .compress_menu{
+        display: none;
+    } 
+  }
+
+/* estilo para la barra en las demas resoluciones
+
+
+/* estilo para el cuerpo de la pagina */
+#main{
+    padding: 1.3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around
+}
+
+/* se establece estilo para las dos columnas princioales e tipo flex */
+
+ .maincol1, .maincol2{
+    display: flex;
+    justify-content: row;
+    flex-wrap: wrap;
+    gap:10px; 
+    width: 370px;
+ }
+
+
+ /* estilos de los cuadros que son de tamano fijo*/
+ /* se establece el estilo para el cuadro de usuario */
+
+.usercard{
+    border: solid 1px darkgray;
+    height:275px;
+    max-width: 360px; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    border-radius: 5px;
+}
+
+.uctitle{
+    background-color: dodgerblue;
+    height: 65px;
+}
+
+.ucbody{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.ucbody h2{
+    margin-bottom: 5px;
+}
+
+#iconouser{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%; 
+    border: silver 3px solid; 
+    padding: 0;
+    position: relative;
+    top:35%;
+    left:5%;
+}
+
+.location img{
+    height: 20px;
+    width: 15px;
+    display:inline-block;    
+    margin-right: 10px;
+}
+
+.location h3{
+  display: inline-block;
+  margin: 0;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.ocupation{
+    font-size:smaller;
+}
+
+.ocupation p:first-child{
+    margin-bottom: 0;
+}
+
+.ocupation p:last-child{
+    margin-top: 0;
+}
+
+.settings img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%; 
+    display:inline-block;    
+    margin-right: 10px;
+    vertical-align:middle;
+}
+
+
+/* se establece estilo para el cuadro de educacion */
+
+
+.educationcard{
+    border: solid 1px darkgray;
+    height:245px;
+    max-width: 360px; 
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    border-radius: 5px;
+}
+
+.ectitle{
+    background-color: rgb(64,64,64);
+    height: 40px;
+    font-size: 0.7em;
+    line-height: 12px;
+    color: white;
+    text-indent: 5%;
+}
+
+.ecbody{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.ec_education h4, .ec_date p, .ec_achievement p{
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.ec_date p{
+  color:gray    
+}
+
+.ec_achievement{
+    font-size: 0.9em;
+}
+
+
+/* se establece estilo para el cuadro de peticiones */
+
+.requestcard{
+    border: solid 1px darkgray;
+    border-radius: 5px;
+    height:200px;
+    width: 300px; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+}
+
+.reqtitle, .connecttitle{
+    background-color: rgb(64,64,64);
+    height: 20%;
+    font-size: 0.7em;
+    color: white;
+    text-indent: 5%;
+    padding: 1px;
+    font-size: 0.7em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: col; 
+    gap:20px;
+    white-space: nowrap;
+    padding-left: 15px;
+}
+
+.reqtitle :first-child{
+    line-height: 30px;
+    background-color: silver;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    border-radius: 50px;
+    color:black;
+    text-indent: 11px;
+    align-self: center;
+}
+
+.reqtitle :nth-child(2) {
+    line-height: 12px;
+    margin-left: 12px;
+}
+
+.reqtitle :nth-child(3){
+    line-height: 12px;
+    margin-left: 40px;
+}
+
+.reqtitle :nth-child(3):hover{
+    cursor: pointer;
+    color: yellow;
+}
+
+.reqlist{
+    padding: 10px 30px 10px 10px;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    background-color: whitesmoke;
+    align-self: center;
+    list-style: none;
+    gap:20px;
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+.reqlist li{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 0;     
+}
+
+.reqlist .sec1{
+    display: flex;
+    height: 30px;
+    line-height: 3px;
+    justify-content: left;
+    gap:15px;
+}
+
+.reqlist .sec2{
+    display: flex;
+    height: 30px;
+    gap:15px;    
+}
+
+.im1, .im2{
+    width: 30px;
+    height: 30px;
+}
+
+.reqlist .sec2 .im1:hover, .reqlist .sec2 .im2:hover{
+    cursor: pointer;
+}
+
+
+/* se establece estilo para el cuadro de conecciones */
+
+.connectcard{
+    border: solid 1px darkgray;
+    border-radius: 5px;
+    height:275px;
+    width: 300px; 
+    margin: 0;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+}
+
+.connectcard .connecttitle{
+    height: 45px;
+}
+
+.connecttitle :first-child{
+    line-height: 21px;
+    text-indent: 20px;
+    background-color: silver;
+    height: 20px;
+    width: 50px;
+    margin: 7px 0 0 0;
+    border-radius: 45%;
+    color:black;
+    margin-top: 8px;
+}
+
+.connecttitle :last-child{
+    line-height: 10px;
+     margin-left: 10px; 
+}
+
+.connectlist{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px 10px;
+    margin: 0;
+    gap:15px;
+    overflow: auto;
+    height: 190px;
+}
+
+.connectlist li *{
+    margin: 0;
+    padding: 0 10px;
+}
+
+.connectlist li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.connectlist li .sec1{
+    display: flex;
+}
+
+.connectlist li .sec2{
+    display: flex;
+}
+
+.connectlist .sec2 .im2:hover{
+    cursor: pointer;
+}
+
+
+
+.connectmore{
+    border-top: solid 1px darkgray;
+    height: 12px;
+    padding: 15px;
+}
+
+.connectmore a{
+  margin-left: 90px;
+}
+
+
+.iconusermini, .checkcircle, .xmark{
+    height: 30px;
+    width: 30px;
+}
+
+
+/* se establece estilo para los circulos de imagen */
+
+
+#circulo{
+    background-color: blue;
+    color: red;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+#circulo:first-child{
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.checkcircle:hover, .xmark:hover{
+    cursor: pointer;
+  }
+  
+
+/* Modal Form from w3schools 2022 and modified by Rafael Fernandez 2022*/
+
+/* Backgroud */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: 1px black solid;
+  }
+
+  .modal-content label{
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .modal-content button{
+    width: 100px;
+    height: 30px;
+    align-self: center;
+    background-color: dodgerblue;
+    border: black 1px solid;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+  }
+
+  .modal-content button:hover{
+    color:silver;
+    cursor: pointer;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* tooltip Form from w3schools 2022 and modified by Rafael Fernandez 2022*/
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(64,64,64);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    font-size: 0.6em;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
