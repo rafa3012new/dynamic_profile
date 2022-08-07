@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile Demo</title>
+    <link rel="stylesheet" href="profile_web.css" type="text/css">
+    <link href="fontawesome5/css/all.min.css" rel="stylesheet">   
+    <script src="profile_web.js"></script>
+</head>
+<body> 
+  <!-- Realizado por Rafael Fernandez 2022 -->
+
+    <!--Profile Bar-->
+    <div class="bar">
+        <div class="bar_item">
+          <p>Profile</p>
+        </div> 
+
+        <div class="bar_item compress_menu">
+          <i class="fa fa-bars"></i>
+        </div>
+        
+        <div class="bar_item">
+           <a href="">Home</a>
+        </div>
+        <div class="bar_item">
+            <a href="">My Profile</a>
+        </div>
+        <div class="bar_item">
+            <a href="">Find Connections</a> 
+        </div>
+        <div class="bar_item" onclick="cerrar()">
+            <p>Sing Out</p>
+        </div>
+    </div>
+
+    <!--Profile Main Page-->
+    <div id="main">
+
+      <div class="maincol1">
+        
+        <!--User  Card-->
+        <div class="usercard">
+          <div class="uctitle">
+            <a href="https://en.wikipedia.org/wiki/Bruce_Wayne_(disambiguation)"><img id="iconouser" src="icons/user.jpg" alt="Icon not found"></a>
+          </div>
+          <div class="ucbody">
+            <h2>Bruce Wayne</h2>
+            <div class="location">
+              <a href="https://www.google.nl/maps/place/26%C2%B021'28.4%22N+127%C2%B047'01.6%22E/@26.3578889,127.7837778,172m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0xcb60ee5c23c0248d!8m2!3d26.357891!4d127.78378"><img src="icons/map-marker.png" alt="Icon not found"></a>
+              <a href="https://en.wikipedia.org/wiki/Gotham_City"><h3>Gotham</h3></a>
+            </div>
+            <div class="ocupation">
+              <p>Ninja | Rich | Super Hero at Justice League (Part-Time)</p>
+              <p>Master of Shadows of Gotham</p>
+            </div>
+            <div class="settings">
+              <img id="iconsettings" src="icons/gear.png" alt="icon not found">
+              <a href="#" id="edit_profile">edit profile</a>
+            </div>
+          </div>
+        </div>
+
+               <!--Education  Card-->
+               <div class="educationcard">
+                <div class="ectitle">
+                  <h3>Education</h3>
+                </div>
+                <div class="ecbody">
+                  <div class="ec_education">
+                    <h4>Ra's al Ghul Clan - Ninja Training 5 years</h4>
+                  </div>
+                  <div class="ec_date">
+                      <p>Dec 1980 - Apr 1985</p>
+                  </div>
+                  <div class="ec_achievement">
+                      <p>Triple Black Belt in Ninjutsu, Shuriken and Katana</p>
+                  </div>
+                  <br>
+                  <div class="ec_education">
+                    <h4>Yale University - 5 Years</h4>
+                  </div>
+                  <div class="ec_date">
+                      <p>Oct 1985 - Oct 1990</p>
+                  </div>
+                  <div class="ec_achievement">
+                      <p>Bachelor Degree in Laws</p>
+                  </div>
+                </div>
+              </div>
+      </div>
+
+      <div class="maincol2">
+
+            <!--Connections Request Card-->
+            <div class="requestcard">       
+              <div class="reqtitle">
+                <h3 id="peticiones">2</h3>
+                <h3>Connection Requests</h3>
+                <h1 id="addrequest" class="tooltip">+<span class="tooltiptext">Add a new request</span></h1>
+              </div>
+              <!-- se maneja la ul en el css como un flexbox -->
+              <!-- cada elemento li de la ul se maneja como un flexbox tambien-->
+              <ul class="reqlist">
+                  <li><div class="sec1"><img class = "iconusermini" src="icons/user.jpg" alt="imagen no encontrada"><p>Batgirl</p></div><div class="sec2"><img class="im1" onclick="addconnect(this)" src="icons/checkcircle.png" alt="imagen no encontrada"> <img class="im2" onclick="cancelreq(this)" src="icons/xmark.png" alt="imagen no encontrada"></div></li>
+                  <li><div class="sec1"><img class = "iconusermini" src="icons/user.jpg" alt="imagen no encontrada"><p>Robin</p></div><div class="sec2"><img class="im1" onclick="addconnect(this)" src="icons/checkcircle.png" alt="imagen no encontrada"> <img class="im2" onclick="cancelreq(this)" src="icons/xmark.png" alt="imagen no encontrada"></div></li>
+                </ul>                
+            </div> 
+            
+                <!--Connections Card-->
+                <div class="connectcard">
+        
+                  <div class="connecttitle">
+                    <h3 id="conexiones">4</h3>
+                    <h3>Your Connections</h3>
+                  </div>
+                  
+                  <!-- se maneja la ul en el css como un flexbox -->
+                  <!-- cada elemento li de la ul se maneja como un flexbox tambien-->                  
+                  <ul class="connectlist">
+                    <li><div class="sec1"><img class = "iconusermini" src="icons/user.jpg" alt="imagen no encontrada"><p>JLO</p></div><div class="sec2"><img class="im2" onclick="cancelconnect(this)" src="icons/xmark.png" alt="imagen no encontrada"></div></li>
+                    <li><div class="sec1"><img class = "iconusermini" src="icons/user.jpg" alt="imagen no encontrada"><p>Alfred</p></div><div class="sec2"><img class="im2" onclick="cancelconnect(this)" src="icons/xmark.png" alt="imagen no encontrada"></div></li>
+                    <li><div class="sec1"><img class = "iconusermini" src="icons/user.jpg" alt="imagen no encontrada"><p>Catwoman</p></div><div class="sec2"><img class="im2" onclick="cancelconnect(this)" src="icons/xmark.png" alt="imagen no encontrada"></div></li>
+                  </ul>                
+                    
+                  <div class="connectmore">
+                    <a href="#" onclick="vermas()">View More</a>
+                  </div>
+
+                </div>            
+      </div>
+  </div>    
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <label for="pname">Introduzca el nombre:</label>
+      <input type="text" id="pname" name="pname">
+      <button id="aceptar">Aceptar</button>
+    </div>
+  </div>
+
+</body>
+</html>
